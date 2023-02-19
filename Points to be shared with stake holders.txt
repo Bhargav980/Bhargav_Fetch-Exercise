@@ -1,0 +1,5 @@
+Points to be shared with Stakeholder:
+
+1. Some key columns of the tables have missing values
+2. The DateTime format should be transferred from UNIX format to normal DateTime.The UNIX format is not a well-readable format for further analysis.
+3. In the rewardsReceiptItemList of receipts table, the barcode column has a special value - 4011. However, this value does not appear in the barcode of the brand table. 
