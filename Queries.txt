@@ -1,0 +1,11 @@
+Queries for predetermined business questions:
+
+1. Select brand_code, sum(total_final_price) from receipt_items INNER JOIN receipts on receipt_items.rewards_receipt_id = receipts.id where receipts.finished_date like “----/06/%” GROUP_BY brand_code order_by sum(total_final_price);		
+
+2. Select user_id, sum(TOTAL_SPENT)  from receipts where finished_date like “----/08/%” GROUP BY user_id order by total_spent;
+
+3. Select user_id, from receipts INNER JOIN receipt_items on receipt_items.rewards_receipt_id = receipts.id order by TOTAL_FINAL_PRICE desc limit 1;
+
+4. select brand_code from receipt_items by TOTAL_FINAL_PRICE desc limit 1;
+
+5. select count(user_id), month(date_scanned) from receipts group by month(date_scanned) order(date_scanned);
